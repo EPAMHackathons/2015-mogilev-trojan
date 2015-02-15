@@ -1,23 +1,719 @@
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <script type="text/javascript"src="scripts/angular.min.js"></script>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script type="text/javascript" src="scripts/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="scripts/materialize.min.js"></script>
 
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
 
-	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/MapService.js"></script>
 </head>
 <body>
-	<div class="row">
-		<div class="col s12">
-			<nav>
-				<div class="col s12">
-					<div class="logo">PickUpMe</div>
-				</div>
-			</nav>
-			<div>
-			</div>
-		</div>
-	</div>
-	
+    <div class="row">
+
+        <nav>
+            <div class="col s12">
+                <div class="logo">PickUpMe</div>
+            </div>
+        </nav>
+        <div class="col s12">
+            <div class="col s12" id="searchbox">
+                <div class="input-field col s2">
+                    <input id="first_name" type="text" class="validate">
+                    <label for="first_name">Origination</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="first_name" type="text" class="validate">
+                    <label for="first_name">Destination</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="first_name" type="text" class="validate">
+                    <label for="first_name">Date</label>
+                </div>
+                <div class="col s12 m6">
+                    <div class="search-button-continer">
+                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-action-search"></i></a>
+                    </div>
+                    <div class="col s11">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                            Create your own!
+                            <i class="mdi-content-send right"></i>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="col s12 m6">
+                    <script type="text/javascript" src="scripts/MapService.js"></script>
+                    <div id="map-canvas"></div>
+                </div>
+                <div class="col s12 m6">
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header row">
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Origination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Destination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>Time
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                This is a square image. Add the "circle" class to it to make it appear circular.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Car info here
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Other action
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Accept
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header row">
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Origination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Destination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>Time
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                This is a square image. Add the "circle" class to it to make it appear circular.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Car info here
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Other action
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Accept
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="collapsible-header row">
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Origination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Destination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>Time
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                This is a square image. Add the "circle" class to it to make it appear circular.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Car info here
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Other action
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Accept
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header row">
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Origination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Destination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>Time
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                This is a square image. Add the "circle" class to it to make it appear circular.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Car info here
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Other action
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Accept
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header row">
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Origination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Destination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>Time
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                This is a square image. Add the "circle" class to it to make it appear circular.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Car info here
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Other action
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Accept
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header row">
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Origination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Destination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>Time
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                This is a square image. Add the "circle" class to it to make it appear circular.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Car info here
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Other action
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Accept
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header row">
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Origination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Destination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>Time
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                This is a square image. Add the "circle" class to it to make it appear circular.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Car info here
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Other action
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Accept
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header row">
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Origination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Destination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>Time
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                This is a square image. Add the "circle" class to it to make it appear circular.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Car info here
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Other action
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Accept
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header row">
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Origination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Destination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>Time
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                This is a square image. Add the "circle" class to it to make it appear circular.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Car info here
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Other action
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Accept
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header row">
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Origination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Destination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>Time
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                This is a square image. Add the "circle" class to it to make it appear circular.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Car info here
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Other action
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Accept
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header row">
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Origination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-maps-place"></i>Destination
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>Time
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                This is a square image. Add the "circle" class to it to make it appear circular.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Car info here
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Other action
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                            Accept
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.collapsible').collapsible({
+                accordion: false
+            });
+        });
+    </script>
 </body>
 </html>

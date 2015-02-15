@@ -1,0 +1,49 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.row, .col {
+    padding: 0;
+    margin: 0;
+}
+
+    .row .col {
+        margin: 0;
+        padding: 0;
+    }
+
+#map-canvas {
+    width: 100%;
+    height: 700px;
+}
+
+#searchbox {
+    margin-top: 15px;
+}
+
+    #searchbox input {
+        padding-left: 0.75rem;
+        box-sizing: border-box;
+    }
+
+.search-button-continer {
+    float: left;
+}
+
+#searchbox button {
+    width: 100%;
+    margin: 5px;
+}
+
+.collapsible-header {
+    padding: 0 15px;
+}
+
+.drive-info{
+    padding: 15px !important;
+}
+
+.actions-container .col{
+    padding: 5px;
+}
