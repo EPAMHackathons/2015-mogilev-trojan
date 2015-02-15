@@ -25,11 +25,14 @@
     margin-top: 15px;
 }
 
-    #searchbox.input {
-        padding-left: 0.75rem;
+    #searchbox input {
+        padding-left: 0.75rem  !important;
         box-sizing: border-box;
     }
-
+    #searchbox .btn {
+        padding-left: 0.75rem  !important;
+        box-sizing: border-box;
+    }
 .search-button-continer {
     float: left;
 }
@@ -40,7 +43,7 @@
 
 
 #searchbox .btn {
-    width: 100%;
+    width: 100% !important;
 }
 
 .collapsible-header {
@@ -59,9 +62,21 @@
 
 .modal{
     width: 500px;
-    height: 500px !important;
+    /*height: 500px !important;*/
+     overflow: visible !important;
+}
+.modal-content{
+    overflow: visible !important;
+}
+.picker__holder{
+    overflow: visible !important;
+    user-select: none;
 }
 .modal .input-field{
     width: 100% !important;
     padding: 0 7px;
+   
+}
+.modal-footer{
+    z-index: -1 !important;
 }

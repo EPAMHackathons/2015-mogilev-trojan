@@ -1,4 +1,4 @@
-<html>
+<html ng-app="webClient">
 <head>
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -6,26 +6,31 @@
     <script type="text/javascript" src="scripts/angular.min.js"></script>
     <script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="scripts/materialize.min.js"></script>
+    <script type="text/javascript" src="scripts/hello.min.js"></script>
 
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/main.css" />
 
     <script type="text/javascript" src="scripts/main.js"></script>
     <script type="text/javascript" src="scripts/MapService.js"></script>
-</head>
-<body>
-    <div class="row">
+    <script type="text/javascript" src="scripts/login.js"></script>
 
+    <script type="text/javascript" src="scripts/Controllers/MainController.js"></script>
+</head>
+<body ng-controller="mainController">
+    <div class="row">
         <nav>
             <div class="col s12">
                 <div class="logo">PickUpMe</div>
-
-
-
                 <ul class="right hide-on-med-and-down">
-                    <li>
+                    <li id="user-nav" style="display:none">
                         <a href="#profileModal" class="modal-trigger">
-                            User Name
+                            Dzmitry Lvov
+                        </a>
+                    </li>
+                    <li id="login-nav">
+                        <a href="#" onclick="loginWithGoogle()">
+                            Log in
                         </a>
                     </li>
                 </ul>
@@ -75,12 +80,12 @@
         <div class="col s12">
             <div class="col s12" id="searchbox">
                 <div class="input-field col s2">
-                    <input id="first_name" type="text" class="validate">
-                    <label for="first_name">Origination</label>
+                    <input id="origination" type="text" class="validate">
+                    <label for="origination">Origination</label>
                 </div>
                 <div class="input-field col s2">
-                    <input id="first_name" type="text" class="validate">
-                    <label for="first_name">Destination</label>
+                    <input id="destination" type="text" class="validate">
+                    <label for="destination">Destination</label>
                 </div>
                 <div class="input-field col s2">
                     <input type="date" class="datepicker" id="tripdate">
@@ -88,14 +93,13 @@
                 </div>
                 <div class="col s12 m6">
                     <div class="search-button-continer">
-                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-action-search"></i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light red" onclick="calcRoute()"><i class="mdi-action-search"></i></a>
                     </div>
                     <div class="col s11">
                         <a class="btn waves-effect waves-light modal-trigger" href="#CreateTripDriver" name="action">
                             Create your own!
                             <i class="mdi-content-send right"></i>
                         </a>
-
                         <div id="CreateTripDriver" class="modal modal-fixed-footer">
                             <div class="modal-content">
                                 <h4>Create your drive</h4>
@@ -176,13 +180,13 @@
                 </div>
                 <div class="col s12 m6">
                     <ul class="collapsible" data-collapsible="accordion">
-                        <li>
+                        <li onclick="buildRoute(this)">
                             <div class="collapsible-header row">
-                                <div class="col m4">
-                                    <i class="mdi-maps-place"></i>Origination
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Mogilev
                                 </div>
-                                <div class="col m4">
-                                    <i class="mdi-maps-place"></i>Destination
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Minsk
                                 </div>
                                 <div class="col m4">
                                     <i class="mdi-device-access-time"></i>Time
@@ -222,13 +226,13 @@
                                 <div class="actions-container">
                                     <div class="col s6">
                                         <button class="btn waves-effect waves-light" type="submit" name="action">
-                                            Other action
+                                            Send a package
                                             <i class="mdi-content-send right"></i>
                                         </button>
                                     </div>
                                     <div class="col s6">
                                         <button class="btn waves-effect waves-light" type="submit" name="action">
-                                            Accept
+                                            Ride
                                             <i class="mdi-content-send right"></i>
                                         </button>
                                     </div>
@@ -241,7 +245,9 @@
         </div>
     </div>
     <script>
+       
         $(document).ready(function () {
+            $.support.cors = true;
             $('.datepicker').pickadate();
             $('.collapsible').collapsible({
                 accordion: false
@@ -256,7 +262,16 @@
                     ready: function () { }, // Callback for Modal open
                     complete: function () { } // Callback for Modal close
                 });
+            var s = hello.init({
+                google: '483455414873-4etuqh7m9bmjaececc26mivhh8njcmgo.apps.googleusercontent.com'
+            }, { redirect_uri: 'index.html' });
+            buildTripList();
+
+
         });
+
+        initAuthorization()
+       
     </script>
 </body>
 </html>

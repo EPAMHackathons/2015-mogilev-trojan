@@ -14,11 +14,21 @@ function initialize() {
 }
 
 function calcRoute() {
-    var start = document.getElementById('start').value;
-    var end = document.getElementById('end').value;
+    var start = document.getElementById('origination').value;
+    var end = document.getElementById('destination').value;
+    drawRoute(start, end);
+}
+function buildRoute(element) {
+    var orig = $(element).find('.orig')[0].innerText;
+    var dest = $(element).find('.dest')[0].innerText;
+
+    drawRoute(orig, dest);
+}
+
+function drawRoute(orig, dest) {
     var request = {
-        origin: start,
-        destination: end,
+        origin: orig,
+        destination: dest,
         travelMode: google.maps.TravelMode.DRIVING
     };
     directionsService.route(request, function (response, status) {
