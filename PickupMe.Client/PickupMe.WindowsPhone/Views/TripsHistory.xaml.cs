@@ -18,7 +18,7 @@ namespace PickupMe.WindowsPhone
 {
 	public partial class TripsHistory : UserControl
 	{
-		SampleAppointmentSource appointmentsSource = new SampleAppointmentSource();
+		PickupAppointmentSource appointmentsSource = new PickupAppointmentSource();
 
 		public TripsHistory()
 		{

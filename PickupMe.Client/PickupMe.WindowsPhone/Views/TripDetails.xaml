@@ -7,6 +7,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="clr-namespace:PickupMe.WindowsPhone.ViewModels"
+    xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Maps.Toolkit;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
+    xmlns:telerikInput="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -24,7 +28,108 @@
 		<phone:Pivot Title="Trip details">
 			<!--Pivot item one-->
 			<phone:PivotItem Header="Map view">
-				<Grid/>
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" ></RowDefinition>
+						<RowDefinition Height="3*"></RowDefinition>
+						<RowDefinition Height="2*"></RowDefinition>
+					</Grid.RowDefinitions>
+					<Grid Grid.Row="0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"></ColumnDefinition>
+							<ColumnDefinition Width="3*"></ColumnDefinition>
+							<ColumnDefinition Width="*"></ColumnDefinition>
+						</Grid.ColumnDefinitions>
+						<Grid Grid.Column="0">
+							<Grid.RowDefinitions>
+								<RowDefinition></RowDefinition>
+								<RowDefinition></RowDefinition>
+							</Grid.RowDefinitions>
+							<Grid Width="30" Grid.Row="0" VerticalAlignment="Center">
+								<Ellipse Fill="Green"/>
+								<TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center">
+									<Run Text="A"/>
+								</TextBlock>
+							</Grid>
+							<Grid  Height="30" Width="30" Grid.Row="1" VerticalAlignment="Center" >
+								<Ellipse Fill="IndianRed"/>
+								<TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Portable User Interface">
+									<Run Text="B"/>
+								</TextBlock>
+							</Grid>
+						</Grid>
+						<StackPanel Grid.Column="1">
+							<telerikInput:RadAutoCompleteBox ActionButtonVisibility="Visible" EmptyFilterBehavior="ShowAll"
+															 x:Name="radAutoCompleteOrigin"
+															 AutoCompletePopupDisplayMode="BelowTextBox"
+															 SuggestionSelectedCommand="{Binding SearchTrips}"/>
+							<telerikInput:RadAutoCompleteBox ActionButtonVisibility="Visible" EmptyFilterBehavior="ShowAll"
+															 x:Name="radAutoCompleteDestination"
+															 AutoCompleteMode="Contains"
+															 SuggestionsSource="{Binding SugestedDestination}"
+															 AutoCompletePopupDisplayMode="BelowTextBox"
+															 SuggestionSelectedCommand="{Binding SearchTrips}"/>
+						</StackPanel>
+						<Button Grid.Column="2" Width="70" Height="70">
+							<Button.Template>
+								<ControlTemplate TargetType="Button">
+									<Grid>
+										<Ellipse Fill="Gray"/>
+										<TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center">
+											<Run Text="Pass"/>
+										</TextBlock>
+									</Grid>
+								</ControlTemplate>
+							</Button.Template>
+						</Button>
+					</Grid>
+					<Grid Grid.Row="1">
+						<Grid.Resources>
+							<DataTemplate x:Key="DataBoundListBoxItemTemplate">
+								<Grid Margin="0,0,0,12">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="Auto"/>
+										<ColumnDefinition/>
+									</Grid.ColumnDefinitions>
+									<Image Width="50" Height="50" Source="{Binding ImageThumbnailSource}"/>
+									<StackPanel Grid.Column="1">
+										<TextBlock FontSize="{StaticResource PhoneFontSizeMedium}" FontFamily="{StaticResource PhoneFontFamilySemiLight}"
+												   Text="{Binding Title}" TextWrapping="Wrap"/>
+										<TextBlock FontSize="{StaticResource PhoneFontSizeSmall}" 
+												   Text="{Binding Information}" TextWrapping="Wrap"/>
+									</StackPanel>
+								</Grid>
+							</DataTemplate>
+						</Grid.Resources>
+
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+						<Grid Grid.Row="1">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition/>
+							</Grid.RowDefinitions>
+							<telerikPrimitives:RadDataBoundListBox Margin="0,14,0,0" Grid.Row="1" ItemsSource="{Binding Items}" ItemTemplate="{StaticResource DataBoundListBoxItemTemplate}"/>
+						</Grid>
+					</Grid>
+					<Grid Grid.Row="2">
+						<maps:Map x:Name="Map">
+							<toolkit:MapExtensions.Children>
+								<toolkit:Pushpin x:Name="RouteDirectionsPushPin" Visibility="Collapsed"/>
+								<toolkit:MapItemsControl Name="StoresMapItemsControl">
+									<toolkit:MapItemsControl.ItemTemplate>
+										<DataTemplate>
+											<toolkit:Pushpin GeoCoordinate="{Binding GeoCoordinate}" Visibility="Visible"/>
+										</DataTemplate>
+									</toolkit:MapItemsControl.ItemTemplate>
+								</toolkit:MapItemsControl>
+								<toolkit:UserLocationMarker x:Name="UserLocationMarker" Visibility="Collapsed"/>
+							</toolkit:MapExtensions.Children>
+						</maps:Map>
+					</Grid>
+				</Grid>
 			</phone:PivotItem>
 
 			<!--Pivot item two-->

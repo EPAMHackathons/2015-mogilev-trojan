@@ -18,15 +18,27 @@
     <File>Images\CompanyLogo.png</File>
     <File>Images\DateTimePickerCancel.png</File>
     <File>Images\DateTimePickerOk.png</File>
+    <File>Images\Frame.png</File>
     <File>Images\FrameThumbnail.png</File>
+    <File>Images\Select.png</File>
     <File>Images\SendIcon.png</File>
     <File>Assets\PanoramaBackground.png</File>
+    <File>Toolkit.Content\ApplicationBar.Add.png</File>
+    <File>Toolkit.Content\ApplicationBar.Cancel.png</File>
+    <File>Toolkit.Content\ApplicationBar.Check.png</File>
+    <File>Toolkit.Content\ApplicationBar.Delete.png</File>
+    <File>Toolkit.Content\ApplicationBar.Select.png</File>
     <File>AppManifest.xaml</File>
     <File>Assets\ApplicationIcon.png</File>
     <File>Assets\Tiles\FlipCycleTileMedium.png</File>
     <File>Microsoft.Phone.Controls.dll</File>
+    <File>Microsoft.Phone.Controls.Toolkit.dll</File>
     <File Type="PCL">Newtonsoft.Json.dll</File>
     <File>SmartNavigation.dll</File>
+    <File Type="PCL">System.Net.Http.dll</File>
+    <File Type="PCL">System.Net.Http.Extensions.dll</File>
+    <File Type="PCL">System.Net.Http.Formatting.dll</File>
+    <File Type="PCL">System.Net.Http.Primitives.dll</File>
     <File>Telerik.Windows.BackgroundAgentTools.dll</File>
     <File>Telerik.Windows.Behaviors.dll</File>
     <File>Telerik.Windows.Controls.Chart.dll</File>
@@ -39,6 +51,10 @@
     <File>Telerik.Windows.Data.dll</File>
     <File>System.Windows.Interactivity.dll</File>
     <File>Newtonsoft.Json.xml</File>
+    <File>System.Net.Http.xml</File>
+    <File>System.Net.Http.Extensions.xml</File>
+    <File>System.Net.Http.Formatting.xml</File>
+    <File>System.Net.Http.Primitives.xml</File>
     <File>Telerik.Windows.BackgroundAgentTools.xml</File>
     <File>Telerik.Windows.Behaviors.xml</File>
     <File>Telerik.Windows.Controls.Chart.xml</File>

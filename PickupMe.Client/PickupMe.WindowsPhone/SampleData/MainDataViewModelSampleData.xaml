@@ -1,0 +1,17 @@
+﻿<viewModels:MainDataViewModel
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:viewModels="clr-namespace:PickupMe.WindowsPhone.ViewModels">
+	<viewModels:MainDataViewModel.Items>
+		<viewModels:SmallTripDetailViewModel Title="Title 1" Information="Information 1" ImageThumbnailSource="/PickupMe.WindowsPhone;component/Images/FrameThumbnail.png" ImageSource="/PickupMe.WindowsPhone;component/Images/Frame.png" Group="ODD"
+											 AvatarUri="http://lorempixel.com/200/200/people/" FirstName="Vasya" LastName="Pupkin" Sits="1"/>
+		<viewModels:SmallTripDetailViewModel Title="Title 2" Information="Information 2" ImageThumbnailSource="/PickupMe.WindowsPhone;component/Images/FrameThumbnail.png" ImageSource="/PickupMe.WindowsPhone;component/Images/Frame.png" Group="EVEN" 
+											 AvatarUri="http://lorempixel.com/200/200/people/" FirstName="Vasya" LastName="Pupkin" Sits="1"/>
+		<viewModels:SmallTripDetailViewModel Title="Title 3" Information="Information 3" ImageThumbnailSource="/PickupMe.WindowsPhone;component/Images/FrameThumbnail.png" ImageSource="/PickupMe.WindowsPhone;component/Images/Frame.png" Group="ODD" 
+											 AvatarUri="http://lorempixel.com/200/200/people/" FirstName="Vasya" LastName="Pupkin" Sits="1"/>
+		<viewModels:SmallTripDetailViewModel Title="Title 4" Information="Information 4" ImageThumbnailSource="/PickupMe.WindowsPhone;component/Images/FrameThumbnail.png" ImageSource="/PickupMe.WindowsPhone;component/Images/Frame.png" Group="EVEN" 
+											 AvatarUri="http://lorempixel.com/200/200/people/" FirstName="Vasya" LastName="Pupkin" Sits="1"/>
+		<viewModels:SmallTripDetailViewModel Title="Title 5" Information="Information 5" ImageThumbnailSource="/PickupMe.WindowsPhone;component/Images/FrameThumbnail.png" ImageSource="/PickupMe.WindowsPhone;component/Images/Frame.png" Group="ODD" 
+											 AvatarUri="http://lorempixel.com/200/200/people/" FirstName="Vasya" LastName="Pupkin" Sits="1"/>
+	</viewModels:MainDataViewModel.Items>
+</viewModels:MainDataViewModel>    

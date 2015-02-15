@@ -41,7 +41,7 @@ namespace PickupMe.WindowsPhone.Helpers
 			{
 				return this.EmptyDataItemTemplate;
 			}
-			CustomMessage message = item as CustomMessage;
+			ProfileMessage message = item as ProfileMessage;
 			if (message.Type == ConversationViewMessageType.Incoming)
 			{
 				return this.IncomingTemplate;
