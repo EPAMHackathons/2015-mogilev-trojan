@@ -1,0 +1,1 @@
+C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\PickupMe.WindowsPhone.csproj;neutral

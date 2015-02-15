@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ANDREY</Machine>
+    <WindowsUser>Андрей</WindowsUser>
+    <TargetPlatformIdentifier>Windows Phone</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>8de172fd-b438-4633-aea9-b28366f1edbc</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Bin\Debug\PickupMe.WindowsPhone.dll">
+      <PackagePath>PickupMe.WindowsPhone.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Phone\v8.1\Libraries\Microsoft.Phone.Controls.dll">
+      <PackagePath>Microsoft.Phone.Controls.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\packages\Newtonsoft.Json.5.0.3\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\packages\SmartNavigation.1.0.0.0\lib\wp71\SmartNavigation.dll">
+      <PackagePath>SmartNavigation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.BackgroundAgentTools.dll">
+      <PackagePath>Telerik.Windows.BackgroundAgentTools.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Behaviors.dll">
+      <PackagePath>Telerik.Windows.Behaviors.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Controls.Chart.dll">
+      <PackagePath>Telerik.Windows.Controls.Chart.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Controls.Data.dll">
+      <PackagePath>Telerik.Windows.Controls.Data.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Controls.DataVisualization.dll">
+      <PackagePath>Telerik.Windows.Controls.DataVisualization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Controls.ImageEditor.dll">
+      <PackagePath>Telerik.Windows.Controls.ImageEditor.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Controls.Input.dll">
+      <PackagePath>Telerik.Windows.Controls.Input.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Controls.Primitives.dll">
+      <PackagePath>Telerik.Windows.Controls.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Core.dll">
+      <PackagePath>Telerik.Windows.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Data.dll">
+      <PackagePath>Telerik.Windows.Data.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\System.Windows.Interactivity.dll">
+      <PackagePath>System.Windows.Interactivity.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\de-DE\Telerik.Windows.Controls.ImageEditor.resources.dll">
+      <PackagePath>de-DE\Telerik.Windows.Controls.ImageEditor.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\fr-FR\Telerik.Windows.Controls.ImageEditor.resources.dll">
+      <PackagePath>fr-FR\Telerik.Windows.Controls.ImageEditor.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\it-IT\Telerik.Windows.Controls.ImageEditor.resources.dll">
+      <PackagePath>it-IT\Telerik.Windows.Controls.ImageEditor.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\de-DE\Telerik.Windows.Controls.Input.resources.dll">
+      <PackagePath>de-DE\Telerik.Windows.Controls.Input.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\fr-FR\Telerik.Windows.Controls.Input.resources.dll">
+      <PackagePath>fr-FR\Telerik.Windows.Controls.Input.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\it-IT\Telerik.Windows.Controls.Input.resources.dll">
+      <PackagePath>it-IT\Telerik.Windows.Controls.Input.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\de-DE\Telerik.Windows.Controls.Primitives.resources.dll">
+      <PackagePath>de-DE\Telerik.Windows.Controls.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\fr-FR\Telerik.Windows.Controls.Primitives.resources.dll">
+      <PackagePath>fr-FR\Telerik.Windows.Controls.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\it-IT\Telerik.Windows.Controls.Primitives.resources.dll">
+      <PackagePath>it-IT\Telerik.Windows.Controls.Primitives.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\de\System.Windows.Interactivity.resources.dll">
+      <PackagePath>de\System.Windows.Interactivity.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\en\System.Windows.Interactivity.resources.dll">
+      <PackagePath>en\System.Windows.Interactivity.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\es\System.Windows.Interactivity.resources.dll">
+      <PackagePath>es\System.Windows.Interactivity.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\fr\System.Windows.Interactivity.resources.dll">
+      <PackagePath>fr\System.Windows.Interactivity.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\it\System.Windows.Interactivity.resources.dll">
+      <PackagePath>it\System.Windows.Interactivity.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\ja\System.Windows.Interactivity.resources.dll">
+      <PackagePath>ja\System.Windows.Interactivity.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\ko\System.Windows.Interactivity.resources.dll">
+      <PackagePath>ko\System.Windows.Interactivity.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\ru\System.Windows.Interactivity.resources.dll">
+      <PackagePath>ru\System.Windows.Interactivity.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\zh-Hans\System.Windows.Interactivity.resources.dll">
+      <PackagePath>zh-Hans\System.Windows.Interactivity.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Expression\Blend\Windows Phone\v8.0\Libraries\zh-Hant\System.Windows.Interactivity.resources.dll">
+      <PackagePath>zh-Hant\System.Windows.Interactivity.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\packages\Newtonsoft.Json.5.0.3\lib\portable-net45+wp80+win8\Newtonsoft.Json.xml">
+      <PackagePath>Newtonsoft.Json.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.BackgroundAgentTools.xml">
+      <PackagePath>Telerik.Windows.BackgroundAgentTools.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Behaviors.xml">
+      <PackagePath>Telerik.Windows.Behaviors.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Controls.Chart.xml">
+      <PackagePath>Telerik.Windows.Controls.Chart.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Controls.Data.xml">
+      <PackagePath>Telerik.Windows.Controls.Data.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Controls.DataVisualization.xml">
+      <PackagePath>Telerik.Windows.Controls.DataVisualization.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Controls.ImageEditor.xml">
+      <PackagePath>Telerik.Windows.Controls.ImageEditor.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Controls.Input.xml">
+      <PackagePath>Telerik.Windows.Controls.Input.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Controls.Primitives.xml">
+      <PackagePath>Telerik.Windows.Controls.Primitives.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Core.xml">
+      <PackagePath>Telerik.Windows.Core.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\lib\RCWP\2014.3.1124.3040\Telerik.Windows.Data.xml">
+      <PackagePath>Telerik.Windows.Data.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\AlignmentGrid.png">
+      <PackagePath>Assets\AlignmentGrid.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\ApplicationIcon.png">
+      <PackagePath>Assets\ApplicationIcon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\BadgeLogo.png">
+      <PackagePath>Assets\BadgeLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\SquareTile150x150.png">
+      <PackagePath>Assets\SquareTile150x150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\SquareTile71x71.png">
+      <PackagePath>Assets\SquareTile71x71.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\Tiles\FlipCycleTileLarge.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileLarge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\Tiles\FlipCycleTileMedium.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileMedium.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\Tiles\FlipCycleTileSmall.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileSmall.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\Tiles\IconicTileMediumLarge.png">
+      <PackagePath>Assets\Tiles\IconicTileMediumLarge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\Tiles\IconicTileSmall.png">
+      <PackagePath>Assets\Tiles\IconicTileSmall.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\WideLogo.png">
+      <PackagePath>Assets\WideLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Images\CompanyLogo.png">
+      <PackagePath>Images\CompanyLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Images\DateTimePickerCancel.png">
+      <PackagePath>Images\DateTimePickerCancel.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Images\DateTimePickerOk.png">
+      <PackagePath>Images\DateTimePickerOk.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Images\FrameThumbnail.png">
+      <PackagePath>Images\FrameThumbnail.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Images\SendIcon.png">
+      <PackagePath>Images\SendIcon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Assets\PanoramaBackground.png">
+      <PackagePath>Assets\PanoramaBackground.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

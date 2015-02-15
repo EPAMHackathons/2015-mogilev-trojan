@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Telerik.UI.Xaml.Grid" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="Telerik.UI.Xaml.Grid">
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xaml" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Grid/Themes/Generic.xaml">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Grid\Themes\Generic.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Generic.xbf" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Grid/Themes/Generic.xbf">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Grid\Themes\Generic.xbf</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeResourcesDark.xaml" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Grid/Themes/ThemeResourcesDark.xaml">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Grid\Themes\ThemeResourcesDark.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeResourcesDark.xbf" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Grid/Themes/ThemeResourcesDark.xbf">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Grid\Themes\ThemeResourcesDark.xbf</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeResourcesLight.xaml" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Grid/Themes/ThemeResourcesLight.xaml">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Grid\Themes\ThemeResourcesLight.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeResourcesLight.xbf" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Grid/Themes/ThemeResourcesLight.xbf">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Grid\Themes\ThemeResourcesLight.xbf</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Telerik.UI.Xaml.Input">
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xaml" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Input/Themes/Generic.xaml">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Input\Themes\Generic.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Generic.xbf" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Input/Themes/Generic.xbf">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Input\Themes\Generic.xbf</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeResourcesDark.xaml" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Input/Themes/ThemeResourcesDark.xaml">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Input\Themes\ThemeResourcesDark.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeResourcesDark.xbf" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Input/Themes/ThemeResourcesDark.xbf">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Input\Themes\ThemeResourcesDark.xbf</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeResourcesLight.xaml" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Input/Themes/ThemeResourcesLight.xaml">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Input\Themes\ThemeResourcesLight.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeResourcesLight.xbf" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Input/Themes/ThemeResourcesLight.xbf">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Input\Themes\ThemeResourcesLight.xbf</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Telerik.UI.Xaml.Primitives">
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xaml" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Primitives/Themes/Generic.xaml">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Primitives\Themes\Generic.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Generic.xbf" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Primitives/Themes/Generic.xbf">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Primitives\Themes\Generic.xbf</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeColorsDark.xaml" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Primitives/Themes/ThemeColorsDark.xaml">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeColorsDark.xbf" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Primitives/Themes/ThemeColorsDark.xbf">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xbf</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeColorsLight.xaml" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Primitives/Themes/ThemeColorsLight.xaml">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeColorsLight.xbf" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Primitives/Themes/ThemeColorsLight.xbf">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xbf</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeResourcesDark.xaml" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Primitives/Themes/ThemeResourcesDark.xaml">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeResourcesDark.xbf" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Primitives/Themes/ThemeResourcesDark.xbf">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xbf</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeResourcesLight.xaml" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Primitives/Themes/ThemeResourcesLight.xaml">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ThemeResourcesLight.xbf" uri="ms-resource://Telerik.UI.Xaml.Grid/Files/Telerik.UI.Xaml.Primitives/Themes/ThemeResourcesLight.xbf">
+						<Candidate type="Path">
+							<Value>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xbf</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Telerik.UI.Xaml.Grid">
+			<ResourceMapSubtree name="Neutral">
+				<NamedResource name="And" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/And">
+					<Candidate type="String">
+						<Value>And</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="CaseSensitiveMode" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/CaseSensitiveMode">
+					<Candidate type="String">
+						<Value>Case-sensitive mode is</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="ClearFilter" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/ClearFilter">
+					<Candidate type="String">
+						<Value>Clear filter</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Contains" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/Contains">
+					<Candidate type="String">
+						<Value>Contains</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="DoesNotContain" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/DoesNotContain">
+					<Candidate type="String">
+						<Value>Does not contain</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="DoesNotEqualTo" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/DoesNotEqualTo">
+					<Candidate type="String">
+						<Value>Is not equal to</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="DragToGroup" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/DragToGroup">
+					<Candidate type="String">
+						<Value>Drag a column header here to group</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="EndsWith" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/EndsWith">
+					<Candidate type="String">
+						<Value>Ends with</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="EqualsTo" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/EqualsTo">
+					<Candidate type="String">
+						<Value>Is equal to</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Filter" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/Filter">
+					<Candidate type="String">
+						<Value>Filter</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="IsFalse" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/IsFalse">
+					<Candidate type="String">
+						<Value>is false</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="IsGreaterThan" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/IsGreaterThan">
+					<Candidate type="String">
+						<Value>Is greater than</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="IsGreaterThanOrEqualTo" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/IsGreaterThanOrEqualTo">
+					<Candidate type="String">
+						<Value>Is greater than or equal to</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="IsLessThan" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/IsLessThan">
+					<Candidate type="String">
+						<Value>Is less than</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="IsLessThanOrEqualTo" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/IsLessThanOrEqualTo">
+					<Candidate type="String">
+						<Value>Is less than or equal to</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="IsTrue" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/IsTrue">
+					<Candidate type="String">
+						<Value>is true</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Off" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/Off">
+					<Candidate type="String">
+						<Value>off</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="On" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/On">
+					<Candidate type="String">
+						<Value>on</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Or" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/Or">
+					<Candidate type="String">
+						<Value>Or</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StartsWith" uri="ms-resource://Telerik.UI.Xaml.Grid/Telerik.UI.Xaml.Grid/Neutral/StartsWith">
+					<Candidate type="String">
+						<Value>Starts with</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

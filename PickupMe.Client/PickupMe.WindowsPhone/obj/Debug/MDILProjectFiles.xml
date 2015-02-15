@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Files>
+  <XAPFiles>
+    <File>resources.pri</File>
+    <File>PickupMe.WindowsPhone.dll</File>
+    <File>Assets\AlignmentGrid.png</File>
+    <File>Assets\BadgeLogo.png</File>
+    <File>Assets\Logo.png</File>
+    <File>Assets\SplashScreen.png</File>
+    <File>Assets\SquareTile150x150.png</File>
+    <File>Assets\SquareTile71x71.png</File>
+    <File>Assets\StoreLogo.png</File>
+    <File>Assets\Tiles\FlipCycleTileLarge.png</File>
+    <File>Assets\Tiles\FlipCycleTileSmall.png</File>
+    <File>Assets\Tiles\IconicTileMediumLarge.png</File>
+    <File>Assets\Tiles\IconicTileSmall.png</File>
+    <File>Assets\WideLogo.png</File>
+    <File>Images\CompanyLogo.png</File>
+    <File>Images\DateTimePickerCancel.png</File>
+    <File>Images\DateTimePickerOk.png</File>
+    <File>Images\FrameThumbnail.png</File>
+    <File>Images\SendIcon.png</File>
+    <File>Assets\PanoramaBackground.png</File>
+    <File>AppManifest.xaml</File>
+    <File>Assets\ApplicationIcon.png</File>
+    <File>Assets\Tiles\FlipCycleTileMedium.png</File>
+    <File>Microsoft.Phone.Controls.dll</File>
+    <File Type="PCL">Newtonsoft.Json.dll</File>
+    <File>SmartNavigation.dll</File>
+    <File>Telerik.Windows.BackgroundAgentTools.dll</File>
+    <File>Telerik.Windows.Behaviors.dll</File>
+    <File>Telerik.Windows.Controls.Chart.dll</File>
+    <File>Telerik.Windows.Controls.Data.dll</File>
+    <File>Telerik.Windows.Controls.DataVisualization.dll</File>
+    <File>Telerik.Windows.Controls.ImageEditor.dll</File>
+    <File>Telerik.Windows.Controls.Input.dll</File>
+    <File>Telerik.Windows.Controls.Primitives.dll</File>
+    <File>Telerik.Windows.Core.dll</File>
+    <File>Telerik.Windows.Data.dll</File>
+    <File>System.Windows.Interactivity.dll</File>
+    <File>Newtonsoft.Json.xml</File>
+    <File>Telerik.Windows.BackgroundAgentTools.xml</File>
+    <File>Telerik.Windows.Behaviors.xml</File>
+    <File>Telerik.Windows.Controls.Chart.xml</File>
+    <File>Telerik.Windows.Controls.Data.xml</File>
+    <File>Telerik.Windows.Controls.DataVisualization.xml</File>
+    <File>Telerik.Windows.Controls.ImageEditor.xml</File>
+    <File>Telerik.Windows.Controls.Input.xml</File>
+    <File>Telerik.Windows.Controls.Primitives.xml</File>
+    <File>Telerik.Windows.Core.xml</File>
+    <File>Telerik.Windows.Data.xml</File>
+    <File>WMAppManifest.xml</File>
+    <File>AppxManifest.xml</File>
+  </XAPFiles>
+  <APPXFiles />
+</Files>
