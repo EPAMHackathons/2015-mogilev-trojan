@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment" AppPlatformVersion="8.1">
   <DefaultLanguage xmlns="" code="ru-RU" />
   <App xmlns="" ProductID="{8de172fd-b438-4633-aea9-b28366f1edbc}" Title="PickupMe.WindowsPhone" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PickupMe.WindowsPhone author" Description="Sample description" Publisher="PickupMe.WindowsPhone" PublisherID="{9e3ee98c-c585-47e0-a77a-2df6a5b254b6}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
@@ -11,7 +11,7 @@
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
     </Capabilities>
     <Tasks>
-      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+      <DefaultTask Name="_default" NavigationPage="Views\MainPage.xaml" />
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="DataBoundToken" TaskName="_default">
@@ -35,4 +35,4 @@
     </ScreenResolutions>
   </App>
 </Deployment>
-<!-- WPSDK Version 8.0.9900 -->
+<!-- WPSDK Version 8.1.14194 -->
