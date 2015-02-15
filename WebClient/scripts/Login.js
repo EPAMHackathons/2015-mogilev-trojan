@@ -40,6 +40,4 @@ initAuthorization = function () {
         $('#user-nav').Hide();
     }
     return isAuthorized;
-
-
 }

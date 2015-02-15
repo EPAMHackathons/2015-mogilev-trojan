@@ -96,7 +96,7 @@
                         <a class="btn-floating btn-large waves-effect waves-light red" onclick="calcRoute()"><i class="mdi-action-search"></i></a>
                     </div>
                     <div class="col s11">
-                        <a class="btn waves-effect waves-light modal-trigger" href="#CreateTripDriver" name="action">
+                        <a class="btn waves-effect waves-light modal-trigger" href="#CreateTripDriver" name="action" style="margin-top:12px;">
                             Create your own!
                             <i class="mdi-content-send right"></i>
                         </a>
@@ -159,16 +159,14 @@
                                     <div class="col s6 ">
                                         <select class="browser-default">
                                             <option value="" disabled selected>Select a car</option>
-                                            <option value="1">Option 1</option>
-                                            <option value="2">Option 2</option>
-                                            <option value="3">Option 3</option>
+                                            <option value="1">Default car</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Create</a>
-                                <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Cancel</a>
+                                <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close" onclick="createTrip()">Create</a>
+                                <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close" onclick=" $('#CreateTripDriver').closeModal();">Cancel</a>
                             </div>
                         </div>
                     </div>
@@ -180,16 +178,16 @@
                 </div>
                 <div class="col s12 m6">
                     <ul class="collapsible" data-collapsible="accordion">
-                        <li onclick="buildRoute(this)">
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
                             <div class="collapsible-header row">
                                 <div class="col m4 orig">
-                                    <i class="mdi-maps-place"></i>Mogilev
+                                    <i class="mdi-maps-place"></i>Moscow
                                 </div>
                                 <div class="col m4 dest">
                                     <i class="mdi-maps-place"></i>Minsk
                                 </div>
                                 <div class="col m4">
-                                    <i class="mdi-device-access-time"></i>Time
+                                    <i class="mdi-device-access-time"></i>4:00 AM
                                 </div>
                             </div>
                             <div class="collapsible-body">
@@ -200,7 +198,7 @@
                                         </div>
                                         <div class="col s10">
                                             <span class="black-text">
-                                                This is a square image. Add the "circle" class to it to make it appear circular.
+                                                Dzmitry Lvov
                                             </span>
                                         </div>
                                     </div>
@@ -210,7 +208,7 @@
                                         </div>
                                         <div class="col s10">
                                             <span class="black-text">
-                                                Car info here
+                                                Default car
                                             </span>
                                         </div>
                                     </div>
@@ -225,13 +223,14 @@
                                 </div>
                                 <div class="actions-container">
                                     <div class="col s6">
-                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                  
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
                                             Send a package
                                             <i class="mdi-content-send right"></i>
                                         </button>
                                     </div>
                                     <div class="col s6">
-                                        <button class="btn waves-effect waves-light" type="submit" name="action">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
                                             Ride
                                             <i class="mdi-content-send right"></i>
                                         </button>
@@ -239,6 +238,775 @@
                                 </div>
                             </div>
                         </li>
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
+                            <div class="collapsible-header row">
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Kiev
+                                </div>
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Gomel
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>4:00 AM
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Dzmitry Lvov
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Default car
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
+                                            Send a package
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
+                                            Ride
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
+                            <div class="collapsible-header row">
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Minsk
+                                </div>
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Brest
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>4:00 AM
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Dzmitry Lvov
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Default car
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
+                                            Send a package
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
+                                            Ride
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
+                            <div class="collapsible-header row">
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Mogilev
+                                </div>
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Grodno
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>4:00 AM
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Dzmitry Lvov
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Default car
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
+                                            Send a package
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
+                                            Ride
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
+                            <div class="collapsible-header row">
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Mogilev
+                                </div>
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Vitebsk
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>4:00 AM
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Dzmitry Lvov
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Default car
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
+                                            Send a package
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
+                                            Ride
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
+                            <div class="collapsible-header row">
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Mogilev
+                                </div>
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Minsk
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>4:00 AM
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Dzmitry Lvov
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Default car
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
+                                            Send a package
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
+                                            Ride
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
+                            <div class="collapsible-header row">
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Mogilev
+                                </div>
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Moscow
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>4:00 AM
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Dzmitry Lvov
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Default car
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
+                                            Send a package
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
+                                            Ride
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
+                            <div class="collapsible-header row">
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Moscow
+                                </div>
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Paris
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>4:00 AM
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Dzmitry Lvov
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Default car
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
+                                            Send a package
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
+                                            Ride
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
+                            <div class="collapsible-header row">
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Mogilev
+                                </div>
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Minsk
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>4:00 AM
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Dzmitry Lvov
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Default car
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
+                                            Send a package
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
+                                            Ride
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
+                            <div class="collapsible-header row">
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Mogilev
+                                </div>
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Minsk
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>4:00 AM
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Dzmitry Lvov
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Default car
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
+                                            Send a package
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
+                                            Ride
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
+                            <div class="collapsible-header row">
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Mogilev
+                                </div>
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Kiev
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>4:00 AM
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Dzmitry Lvov
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Default car
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
+                                            Send a package
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
+                                            Ride
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
+                            <div class="collapsible-header row">
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Mogilev
+                                </div>
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Minsk
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>4:00 AM
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Dzmitry Lvov
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Default car
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
+                                            Send a package
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
+                                            Ride
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
+                            <div class="collapsible-header row">
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Minsk
+                                </div>
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Mogilev
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>4:00 AM
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Dzmitry Lvov
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Default car
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
+                                            Send a package
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
+                                            Ride
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li onclick="buildRoute(this)" ng-repeat="trip in tripList">
+                            <div class="collapsible-header row">
+                                <div class="col m4 orig">
+                                    <i class="mdi-maps-place"></i>Mogilev
+                                </div>
+                                <div class="col m4 dest">
+                                    <i class="mdi-maps-place"></i>Minsk
+                                </div>
+                                <div class="col m4">
+                                    <i class="mdi-device-access-time"></i>4:00 AM
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="drive-info col s12">
+                                    <div class="driver col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://yellowicons.com/wp-content/uploads/Person-Icon-3.JPG" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Dzmitry Lvov
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="car col s6 valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple4/v4/bd/4e/7a/bd4e7a54-23c5-5668-15b6-ba9577400966/V4HttpAssetRepositoryClient-mzl.aewkcfxa.png-8719914629233993091.png" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text">
+                                                Default car
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="drive-details">
+                                    <div class="passangers-list col s6">
+
+                                    </div>
+                                    <div class="drive-additional col s6">
+
+                                    </div>
+                                </div>
+                                <div class="actions-container">
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" onclick="toast('Request sent!', 4000)" type="submit" name="action" ng-click="print()">
+                                            Send a package
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col s6">
+                                        <button class="btn waves-effect waves-light" type="submit" name="action" onclick="toast('Request sent!', 4000)">
+                                            Ride
+                                            <i class="mdi-content-send right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>
