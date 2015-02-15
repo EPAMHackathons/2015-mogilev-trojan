@@ -17,7 +17,7 @@ namespace PickupMe.WindowsPhone.Helpers
 {
 	public class MessageGroupTemplateSelector : DataTemplateSelector
 	{
-		private CustomMessage previousMessage;
+		private ProfileMessage previousMessage;
 		private int uniqueGroupIdentifier = 0;
 
 		public DataTemplate IncomingTemplate
@@ -35,7 +35,7 @@ namespace PickupMe.WindowsPhone.Helpers
 		public override DataTemplate SelectTemplate(object item, DependencyObject container)
 		{
 			DataGroup currentGroup = item as DataGroup;
-			CustomMessage firstMessageInGroup = currentGroup.Key as CustomMessage;
+			ProfileMessage firstMessageInGroup = currentGroup.Key as ProfileMessage;
 			switch (firstMessageInGroup.Type)
 			{
 				case ConversationViewMessageType.Incoming:

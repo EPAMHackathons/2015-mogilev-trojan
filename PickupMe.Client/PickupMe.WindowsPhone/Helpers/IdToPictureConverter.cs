@@ -18,14 +18,11 @@ namespace PickupMe.WindowsPhone.Helpers
 	{
 		public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 		{
-			int id = (int)value;
-			MessagesViewModel viewModel = new MessagesViewModel();
-			foreach (Person person in viewModel.People)
+			int id = int.Parse(value.ToString());
+			UserProfileViewModel viewModel = new UserProfileViewModel();
+			foreach (PersonViewModel person in viewModel.People)
 			{
-				if (id == person.PersonId)
-				{
-					return person.Picture;
-				}
+				
 			}
 			return null;
 		}

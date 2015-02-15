@@ -2,6 +2,7 @@
   <Deployment.Parts>
     <AssemblyPart x:Name="PickupMe.WindowsPhone" Source="PickupMe.WindowsPhone.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
     <AssemblyPart x:Name="Newtonsoft.Json" Source="Newtonsoft.Json.dll" />
     <AssemblyPart x:Name="SmartNavigation" Source="SmartNavigation.dll" />
     <AssemblyPart x:Name="System.Net.Http" Source="System.Net.Http.dll" />

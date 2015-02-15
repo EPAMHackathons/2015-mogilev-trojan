@@ -18,13 +18,21 @@
     <File>Images\CompanyLogo.png</File>
     <File>Images\DateTimePickerCancel.png</File>
     <File>Images\DateTimePickerOk.png</File>
+    <File>Images\Frame.png</File>
     <File>Images\FrameThumbnail.png</File>
+    <File>Images\Select.png</File>
     <File>Images\SendIcon.png</File>
     <File>Assets\PanoramaBackground.png</File>
+    <File>Toolkit.Content\ApplicationBar.Add.png</File>
+    <File>Toolkit.Content\ApplicationBar.Cancel.png</File>
+    <File>Toolkit.Content\ApplicationBar.Check.png</File>
+    <File>Toolkit.Content\ApplicationBar.Delete.png</File>
+    <File>Toolkit.Content\ApplicationBar.Select.png</File>
     <File>AppManifest.xaml</File>
     <File>Assets\ApplicationIcon.png</File>
     <File>Assets\Tiles\FlipCycleTileMedium.png</File>
     <File>Microsoft.Phone.Controls.dll</File>
+    <File>Microsoft.Phone.Controls.Toolkit.dll</File>
     <File Type="PCL">Newtonsoft.Json.dll</File>
     <File>SmartNavigation.dll</File>
     <File Type="PCL">System.Net.Http.dll</File>

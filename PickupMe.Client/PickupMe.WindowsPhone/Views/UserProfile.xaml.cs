@@ -34,20 +34,20 @@ namespace PickupMe.WindowsPhone
 				return;
 			}
 			ConversationViewMessage originalMessage = e.Message as ConversationViewMessage;
-			MessagesViewModel viewModel = this.DataContext as MessagesViewModel;
-			CustomMessage previousMessage = viewModel.Messages.Last();
+			UserProfileViewModel viewModel = this.DataContext as UserProfileViewModel;
+			ProfileMessage previousMessage = viewModel.Messages.Last();
 			int group = previousMessage.Group.HasValue ? previousMessage.Group.Value : 0;
 			if (previousMessage.SenderId != viewModel.You.PersonId)
 			{
 				group++;
 			}
-			CustomMessage customMessage = new CustomMessage(originalMessage.Text, originalMessage.TimeStamp, originalMessage.Type, viewModel.You.PersonId, group);
-			viewModel.Messages.Add(customMessage);
+			ProfileMessage profileMessage = new ProfileMessage(originalMessage.Text, originalMessage.TimeStamp, originalMessage.Type, viewModel.You.PersonId, group);
+			viewModel.Messages.Add(profileMessage);
 		}
 
 		private void SetConversationParticipants()
 		{
-			MessagesViewModel viewModel = this.DataContext as MessagesViewModel;
+			UserProfileViewModel viewModel = this.DataContext as UserProfileViewModel;
 			viewModel.ConversationBuddy = viewModel.People[0];
 			viewModel.You = viewModel.People[4];
 		}
@@ -56,7 +56,7 @@ namespace PickupMe.WindowsPhone
 		{
 			this.conversationView.GroupDescriptors = new DataDescriptor[] 
             { 
-                new GenericGroupDescriptor<CustomMessage, CustomMessage>(message => message)
+                new GenericGroupDescriptor<ProfileMessage, ProfileMessage>(message => message)
             };
 		}
 	}

@@ -19,7 +19,7 @@
     shell:SystemTray.IsVisible="False">
 
 	<UserControl.DataContext>
-		<viewModels:MessagesViewModel/>
+		<viewModels:UserProfileViewModel/>
 	</UserControl.DataContext>
 
 	<UserControl.Resources>

@@ -65,8 +65,9 @@ namespace PickupMe.WindowsPhone.Views
 			{
 				var parameters = responceData.Split('#')[1].Split('&');
 				var accessToken = parameters[0].Substring(parameters[0].IndexOf("=", StringComparison.Ordinal)).Remove(0, 1);
-				AuthVault.AuthToken = accessToken;
-
+				var userId = parameters[0].Substring(parameters[2].IndexOf("=", StringComparison.Ordinal)).Remove(0, 1);
+				Vault.AuthToken = accessToken;
+				Vault.UserId = userId;
 				NavigationService.Navigate(new Uri("/Views/MainPage.xaml", UriKind.Relative));
 			}
 		}

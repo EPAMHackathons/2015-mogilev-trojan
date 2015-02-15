@@ -33,6 +33,9 @@
 			<phone:PanoramaItem Header="Profile">
 				<windowsPhone:UserProfile></windowsPhone:UserProfile>
 			</phone:PanoramaItem>
+			<phone:PanoramaItem Header="My cars Profile">
+				<windowsPhone:UserCars></windowsPhone:UserCars>
+			</phone:PanoramaItem>
 		</phone:Panorama>
 	</Grid>
 </phone:PhoneApplicationPage>

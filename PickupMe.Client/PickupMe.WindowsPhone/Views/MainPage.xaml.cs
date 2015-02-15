@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using PickupMe.WindowsPhone.Helpers;
+using GestureEventArgs = System.Windows.Input.GestureEventArgs;
 
 namespace PickupMe.WindowsPhone
 {
@@ -36,7 +37,7 @@ namespace PickupMe.WindowsPhone
 				App.ViewModel.LoadData();
 			}
 
-			if (AuthVault.AuthToken == null)
+			if (Vault.AuthToken == null)
 			{
 				this.NavigationService.Navigate(new Uri("/Views/AuthPage.xaml", UriKind.RelativeOrAbsolute));
 			}

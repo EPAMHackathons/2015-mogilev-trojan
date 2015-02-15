@@ -11,40 +11,82 @@
     xmlns:telerikDataForm="clr-namespace:Telerik.Windows.Controls.DataForm;assembly=Telerik.Windows.Controls.Input"
     xmlns:models="clr-namespace:PickupMe.WindowsPhone.Models"
     xmlns:helpers="clr-namespace:PickupMe.WindowsPhone.Helpers"
+    xmlns:viewModels="clr-namespace:PickupMe.WindowsPhone.ViewModels"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Core"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     mc:Ignorable="d" d:DesignHeight="728" d:DesignWidth="480"
     shell:SystemTray.IsVisible="False">
 
+	<UserControl.DataContext>
+		<viewModels:StartTripViewModel/>
+	</UserControl.DataContext>
+
 	<Grid x:Name="LayoutRoot" Background="Transparent">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="*"/>
-		</Grid.RowDefinitions>
-
-		<StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-			<TextBlock x:Name="ApplicationTitle" Text="CHECK OUT" Style="{StaticResource PhoneTextNormalStyle}"/>
-		</StackPanel>
-
-		<Grid Grid.Row="1">
-			<ScrollViewer>
-				<telerikInput:RadDataForm Grid.Row="1" Margin="12,48,12,12" x:Name="DataForm">
-					<telerikInput:RadDataForm.CurrentItem>
-						<models:StartTripCreationDataModel/>
-					</telerikInput:RadDataForm.CurrentItem>
-					<Grid>
-						<telerikInput:DataField Header="Destination *" TargetProperty="Origination">
-						</telerikInput:DataField>
-						<telerikInput:DataField Header="Origination *" TargetProperty="Destination">
-						</telerikInput:DataField>
-						<telerikInput:DataField Header="Trip date *" TargetProperty="TripDate">
-						</telerikInput:DataField>
-						<telerikInput:DataField TargetProperty="SearchType"/>
-						<Button Click="ButtonBase_OnClick">Start search</Button>
+		<ScrollViewer>
+			<StackPanel>
+				<toolkit:ListPicker SelectedItem="{Binding SearchType, Mode=TwoWay}" Header="I'm" ItemsSource="{Binding TripTypes}">
+				</toolkit:ListPicker>
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"></ColumnDefinition>
+						<ColumnDefinition Width="3*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<Grid Grid.Column="0">
+						<Grid.RowDefinitions>
+							<RowDefinition></RowDefinition>
+							<RowDefinition></RowDefinition>
+						</Grid.RowDefinitions>
+						<Grid Width="30" Grid.Row="0" VerticalAlignment="Center">
+							<Ellipse Fill="Green"/>
+							<TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center">
+									<Run Text="A"/>
+							</TextBlock>
+						</Grid>
+						<Grid  Height="30" Width="30" Grid.Row="1" VerticalAlignment="Center" >
+							<Ellipse Fill="IndianRed"/>
+							<TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Portable User Interface">
+									<Run Text="B"/>
+							</TextBlock>
+						</Grid>
 					</Grid>
-				</telerikInput:RadDataForm>
-			</ScrollViewer>
-		</Grid>
+					<StackPanel Grid.Column="1">
+						<telerikInput:RadAutoCompleteBox ActionButtonVisibility="Visible" EmptyFilterBehavior="ShowAll" Header="From"
+															 x:Name="radAutoCompleteOrigin"
+															 AutoCompletePopupDisplayMode="BelowTextBox"
+															 SuggestionSelectedCommand="{Binding SearchTrips}"/>
+						<telerikInput:RadAutoCompleteBox ActionButtonVisibility="Visible" EmptyFilterBehavior="ShowAll" Header="To"
+															 x:Name="radAutoCompleteDestination"
+															 AutoCompleteMode="Contains"
+															 SuggestionsSource="{Binding SugestedDestination}"
+															 AutoCompletePopupDisplayMode="BelowTextBox"
+															 SuggestionSelectedCommand="{Binding SearchTrips}"/>
+					</StackPanel>
+				</Grid>
+				<telerikInput:RadNumericUpDown Value="{Binding Sits}" Header="Sits needed"></telerikInput:RadNumericUpDown>
+				<toolkit:ListPicker IsEnabled="{Binding IsSelectCarVisible}" SelectedItem="{Binding SelectedCar, Mode=TwoWay}" Header="Select your car" ItemsSource="{Binding UserCars}">
+					<toolkit:ListPicker.ItemTemplate>
+						<DataTemplate>
+							<StackPanel>
+								<TextBlock Text="{Binding Make}" FontSize="{StaticResource PhoneFontSizeSmall}"/>
+								<TextBlock Text="{Binding Model}" FontSize="{StaticResource PhoneFontSizeSmall}"/>
+							</StackPanel>
+						</DataTemplate>
+					</toolkit:ListPicker.ItemTemplate>
+					<toolkit:ListPicker.FullModeItemTemplate>
+						<DataTemplate>
+							<StackPanel>
+								<TextBlock Text="{Binding Make}" FontSize="{StaticResource PhoneFontSizeSmall}"/>
+								<TextBlock Text="{Binding Model}" FontSize="{StaticResource PhoneFontSizeSmall}"/>
+							</StackPanel>
+						</DataTemplate>
+					</toolkit:ListPicker.FullModeItemTemplate>
+				</toolkit:ListPicker>
+				<telerikInput:RadDatePicker Value="{Binding Date}" Header="Date"></telerikInput:RadDatePicker>
+				<Button Content="{Binding ButtonText, Mode=TwoWay}" Command="{Binding SubmitCommand}"></Button>
+			</StackPanel>
+		</ScrollViewer>
 	</Grid>
 </UserControl>

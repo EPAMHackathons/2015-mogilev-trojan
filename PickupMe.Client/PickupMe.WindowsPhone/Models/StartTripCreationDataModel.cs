@@ -12,7 +12,7 @@ namespace PickupMe.WindowsPhone.Models
 
 		public DateTime? TripDate { get; set; }
 
-		[GenericListEditor(typeof (CountriesInfoProvider))]
+		[GenericListEditor(typeof (TripTypeProvider))]
 		public string SearchType { get; set; }
 	}
 }
