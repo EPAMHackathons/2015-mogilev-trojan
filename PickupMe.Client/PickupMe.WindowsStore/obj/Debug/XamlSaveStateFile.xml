@@ -1,0 +1,12 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\андрей\documents\2015-mogilev-trojan\pickupme.client\pickupme.windowsstore\obj\debug\intermediatexaml\pickupme.windowsstore.exe" HashGuid="7f1d9b3e-fc68-a77c-2c2a-0c77bdf40cb2" />
+    <ReferenceAssembly PathName="c:\users\андрей\documents\2015-mogilev-trojan\pickupme.client\lib\w8x\2014.1.221.45\core\telerik.core.dll" HashGuid="f12ec990-e561-d983-eb61-4a0ee18a55a8" />
+    <ReferenceAssembly PathName="c:\users\андрей\documents\2015-mogilev-trojan\pickupme.client\lib\w8x\2014.1.221.45\maputils\telerik.geospatial.dll" HashGuid="c884b2ef-d659-567a-9f77-7ce1d85affb8" />
+    <ReferenceAssembly PathName="c:\users\андрей\documents\2015-mogilev-trojan\pickupme.client\lib\w8x\2014.1.221.45\chart\telerik.ui.xaml.chart.dll" HashGuid="7a66b89e-cfea-38ab-6dd0-3e8557341cce" />
+    <ReferenceAssembly PathName="c:\users\андрей\documents\2015-mogilev-trojan\pickupme.client\lib\w8x\2014.1.221.45\datavisualization\telerik.ui.xaml.datavisualization.dll" HashGuid="7a31811e-8d8f-d735-9e61-a82c7cced97e" />
+    <ReferenceAssembly PathName="c:\users\андрей\documents\2015-mogilev-trojan\pickupme.client\lib\w8x\2014.1.221.45\grid\telerik.ui.xaml.grid.dll" HashGuid="bd6e2839-9fbf-82bc-52c9-f8b6a2793919" />
+    <ReferenceAssembly PathName="c:\users\андрей\documents\2015-mogilev-trojan\pickupme.client\lib\w8x\2014.1.221.45\input\telerik.ui.xaml.input.dll" HashGuid="f3b54f67-0283-ffe1-573a-e9d7706bf0e7" />
+    <ReferenceAssembly PathName="c:\users\андрей\documents\2015-mogilev-trojan\pickupme.client\lib\w8x\2014.1.221.45\primitives\telerik.ui.xaml.primitives.dll" HashGuid="579b261b-9557-a6df-a326-ac5f003b2c9e" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>
