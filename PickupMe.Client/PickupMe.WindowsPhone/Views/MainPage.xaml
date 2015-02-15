@@ -25,12 +25,12 @@
 				</ListBox>
 			</phone:PanoramaItem>
 			<phone:PanoramaItem Header="Start trip">
-				<windowsPhone:UserProfile></windowsPhone:UserProfile>
+				<windowsPhone:StartTrip></windowsPhone:StartTrip>
 			</phone:PanoramaItem>
 			<phone:PanoramaItem Header="Trip history">
 				<windowsPhone:TripsHistory></windowsPhone:TripsHistory>
 			</phone:PanoramaItem>
-			<phone:PanoramaItem Header="second item">
+			<phone:PanoramaItem Header="Profile">
 				<windowsPhone:UserProfile></windowsPhone:UserProfile>
 			</phone:PanoramaItem>
 		</phone:Panorama>

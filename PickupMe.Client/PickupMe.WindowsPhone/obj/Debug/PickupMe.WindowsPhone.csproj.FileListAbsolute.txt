@@ -90,3 +90,6 @@ C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.Win
 C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\obj\Debug\Views\UserProfile.g.cs
 C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Bin\Debug\Microsoft.Phone.Controls.dll
 C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\obj\Debug\Views\TripDetails.g.cs
+C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Bin\Debug\Newtonsoft.Json.dll
+C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Bin\Debug\SmartNavigation.dll
+C:\Users\Андрей\Documents\2015-mogilev-trojan\PickupMe.Client\PickupMe.WindowsPhone\Bin\Debug\Newtonsoft.Json.xml

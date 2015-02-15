@@ -25,6 +25,8 @@
     <File>Assets\ApplicationIcon.png</File>
     <File>Assets\Tiles\FlipCycleTileMedium.png</File>
     <File>Microsoft.Phone.Controls.dll</File>
+    <File Type="PCL">Newtonsoft.Json.dll</File>
+    <File>SmartNavigation.dll</File>
     <File>Telerik.Windows.BackgroundAgentTools.dll</File>
     <File>Telerik.Windows.Behaviors.dll</File>
     <File>Telerik.Windows.Controls.Chart.dll</File>
@@ -36,6 +38,7 @@
     <File>Telerik.Windows.Core.dll</File>
     <File>Telerik.Windows.Data.dll</File>
     <File>System.Windows.Interactivity.dll</File>
+    <File>Newtonsoft.Json.xml</File>
     <File>Telerik.Windows.BackgroundAgentTools.xml</File>
     <File>Telerik.Windows.Behaviors.xml</File>
     <File>Telerik.Windows.Controls.Chart.xml</File>

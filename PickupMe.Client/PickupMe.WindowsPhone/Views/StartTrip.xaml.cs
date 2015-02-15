@@ -12,6 +12,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using PickupMe.WindowsPhone.ViewModels;
 using SmartNavigation;
 
 namespace PickupMe.WindowsPhone
@@ -26,7 +27,7 @@ namespace PickupMe.WindowsPhone
 		private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
 		{
 			this.DataForm.Commit();
-			//SmartNavigationService.Current.Navigate("/Views/TripDetails.xaml");
+			SmartNavigationService.Current.Navigate<TripDetailsViewModel>("/Views/TripDetails.xaml", t => t.Init());
 		}
 	}
 }
